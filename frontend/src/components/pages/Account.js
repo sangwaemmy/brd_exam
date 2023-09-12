@@ -106,11 +106,11 @@ function Account() {
     });
   }
 
-
-
   useEffect(() => {
     getAllAccounts()
     getAllAccount_categorys()
+    getAccountsAreDisenabled()
+    getAccountsAreEnabled()
     document.body.style.backgroundColor = '#fff'
 
     var userid = 1;

@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React, { Component } from 'react'
 import Conn from './Conn';
+import Commons from './Commons';
 
 class Repository {
     static page = (Repository.page < 1 || Repository.page == undefined) ? 1 : Repository.page;
@@ -16,22 +17,22 @@ class Repository {
         return axios.get(Repository.server + "/", { headers: Repository.getHeaders })
     }
     findCategoriesCount() {
-        return axios.get(Repository.server + "/count/")
+        return axios.get(Repository.server + "/count/", { headers: Repository.getHeaders })
     }
     findProfile() {
-        return axios.get(Repository.server + "/profile/")
+        return axios.get(Repository.server + "/profile/", { headers: Repository.getHeaders })
     }
     findAccount() {
-        return axios.get(Repository.server + "/account")
+        return axios.get(Repository.server + "/account", { headers: Repository.getHeaders })
     }
     findTender_subm () {
-        return axios.get(Repository.server + "/tender_subm/")
+        return axios.get(Repository.server + "/tender_subm/", { headers: Repository.getHeaders })
     }
     findTender_eval() {
-        return axios.get(Repository.server + "/tender_eval/")
+        return axios.get(Repository.server + "/tender_eval/", { headers: Repository.getHeaders })
     }
     findComm_notify() {
-        return axios.get(Repository.server + "/comm_notify/")
+        return axios.get(Repository.server + "/comm_notify/", { headers: Repository.getHeaders })
     }
     findRating() {
         return axios.get(Repository.server + "/codes/rating")
@@ -48,6 +49,9 @@ class Repository {
                     a.click();
                 });
             });
+    }
+    findAccountByStatus(status) {
+        return axios.get(Repository.server + "/account/users/byStatus/" + status, { headers: Repository.getHeaders }).catch(() => { Commons.RedirectToLogin() })
     }
     findApssDownloadSingleFrontEndApp(appName) { /*FrontEnd*/
         fetch(Repository.server + '/codes/downloadfront/' + appName)

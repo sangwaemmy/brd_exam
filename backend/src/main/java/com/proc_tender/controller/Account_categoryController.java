@@ -36,7 +36,6 @@ public class Account_categoryController {
     public  ResponseEntity<List<Mdl_account_category>> getAll() {
         List<Mdl_account_category> struc = new ArrayList<>();
         account_categoryRepository.findAll().forEach(struc::add);
-        
         return new ResponseEntity<>(struc, HttpStatus.OK);
     }
 

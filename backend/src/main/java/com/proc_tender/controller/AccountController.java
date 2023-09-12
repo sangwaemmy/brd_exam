@@ -3,6 +3,7 @@ package com.proc_tender.controller;
 import com.proc_tender.exception.ResourceNotFoundException;
 import com.proc_tender.DTO.MultipleAccounts;
 import com.proc_tender.jwtsecurity.User;
+import com.proc_tender.models.UserDetailsResponse;
 import com.proc_tender.repository.AccountRepository;
 import io.swagger.annotations.ApiOperation;
 import java.util.ArrayList;
@@ -73,7 +74,10 @@ public class AccountController {
         accountRepository.deleteById(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
-
+@GetMapping("/users/byStatus/{status}")
+    public List<UserDetailsResponse> getAccountByStatus(@PathVariable String status) {
+        return accountRepository.findUserAndProfileByStatus(status);
+    }
 //    Adding more accounts at the same time
     @PostMapping("/multiaccount")
     public ResponseEntity<String> multipleaccounts(@RequestBody MultipleAccounts multipleAccounts) {
