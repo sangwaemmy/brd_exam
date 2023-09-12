@@ -1,0 +1,79 @@
+
+
+@mixin gradient($fromcolor,$tocolor){
+    background-image: -webkit-linear-gradient(right top,$fromcolor 0%,$tocolor 100%);
+    background-image: -moz-linear-gradient(right top,$fromcolor 0%,$tocolor 100%);
+    background-image: -o-linear-gradient(right top,$fromcolor 0%,$tocolor 100%);
+    background-image: -ms-linear-gradient(right top,$fromcolor 0%,$tocolor 100%);
+
+}
+@mixin sml_device(){
+    @media only screen and (max-width: 600px){
+        @content;
+    }
+}
+@mixin medium_device(){
+    @media only screen and (min-width: 600px) and (max-width: 768px){
+        @content;
+    }
+}
+@mixin bigger_devices(){
+    @media only screen and (min-width: 768px){
+        @content;   
+    }
+}
+@mixin indexes($index){
+    z-index: $index;
+}
+
+@mixin vary_width($width){
+    width: $width;
+    margin: auto;
+}
+@mixin vary_top_pad($pad){
+    padding-top: $pad;
+}
+@mixin vary_bottom_mrgin($margin){
+    margin-bottom: $margin;
+}
+@mixin vary_height($height){
+    height: $height;
+}
+
+
+
+//Horizontally Iconed, These are the before layouts of the link or other elements for which we are making the icons
+@mixin horizontal_iconed($size){
+    position: absolute;
+    left: -$size;
+    top: 0px;
+    width: $size;
+    height: $size;
+    background-size: $size;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+@mixin vertical_iconed($size){
+    position: absolute;
+    top: -$size;
+    top: 0px;
+    width: $size;
+    height: $size;
+    background-size: $size;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+
+
+
+
+
+
+
+
+
+

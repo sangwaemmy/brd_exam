@@ -1,0 +1,122 @@
+.c {
+  color: #d9f4dc; }
+
+.bg_theme1 {
+  background-color: #eb4d10;
+  color: #fff; }
+
+.txt_theme1 {
+  color: #eb4d10; }
+
+.brd_theme1 {
+  border: 1px solid #eb4d10; }
+
+.brd_theme2 {
+  border: 2px solid #eb4d10; }
+
+.bg_theme2 {
+  background-color: #726c69; }
+
+* {
+  box-sizing: border-box; }
+
+body {
+  font-size: 14px;
+  color: #333333; }
+
+body a {
+  color: #333333;
+  text-decoration: none; }
+
+.top_menu {
+  font-size: 12px;
+  padding: 3px;
+  font-weight: bolder; }
+
+.caps {
+  text-transform: uppercase; }
+
+.b {
+  font-weight: bolder; }
+
+.caps {
+  text-transform: uppercase; }
+
+.capital {
+  text-transform: capitalize; }
+
+.pad_half {
+  padding: 15px; }
+
+.no_brd {
+  border: none; }
+
+.black_bg {
+  background-color: #333333;
+  color: #fff; }
+
+.clr_txt_dark {
+  color: #b3b3b3; }
+
+ul.list {
+  line-height: 2em;
+  list-style: none;
+  margin: 0px;
+  padding: 0px; }
+
+@media only screen and (max-width: 600px) {
+  .s1, .s2, .s3 {
+    background-size: cover; } }
+.slider .s1, .slider .s2, .slider .s3 {
+  background-size: 100%;
+  background-repeat: no-repeat; }
+.slider .s1 {
+  background-image: url("../images/bed2.jpg"); }
+.slider .s3 {
+  background-image: url("../images/bd4.jpg"); }
+.slider .s2 {
+  background-image: url("../images/bd1.jpg"); }
+
+.featured {
+  background-size: 100%;
+  background-repeat: no-repeat; }
+
+.feat1 {
+  background-image: url("../images/house1.jpg"); }
+
+.feat2 {
+  background-image: url("../images/house2.jpg"); }
+
+.feat3 {
+  background-image: url("../images/house3.jpg"); }
+
+.v_start {
+  align-items: start; }
+
+.boxed {
+  width: 40px;
+  height: 40px; }
+
+.dark_txt {
+  color: #262626; }
+
+.full_radius {
+  border-radius: 100%; }
+
+.cats {
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+.cat1 {
+  background-image: url("../images/cat1.jpg"); }
+
+.cat2 {
+  background-image: url("../images/cat2.jpg"); }
+
+.cat3 {
+  background-image: url("../images/cat3.jpg"); }
+
+.cat4 {
+  background-image: url("../images/cat4.jpg"); }
+
+/*# sourceMappingURL=my_styles.css.map */
